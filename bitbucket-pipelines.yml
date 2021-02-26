@@ -1,0 +1,20 @@
+# Bitbucket Pipelines Configuration file
+# https://confluence.atlassian.com/bitbucket/configure-bitbucket-pipelines-yml-792298910.html
+# options:
+  # size: 2x
+  # max-time: 60
+image: atlassian/default-image:2
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Fazendo Deploy em Produção
+          deployment: production
+          script:
+            - apt-get -qq install rsync
+            - cd wp-content/themes/$BITBUCKET_REPO_SLUG/
+            - npm install -g gulp
+            - npm install
+            - gulp
+            - cd ../../../
+            - rsync -ravz --exclude-from=deployment-exclude-list.txt $BITBUCKET_CLONE_DIR/ $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH

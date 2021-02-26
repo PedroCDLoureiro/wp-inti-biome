@@ -1,0 +1,15 @@
+/.*
+bitbucket-pipelines.yml
+deployment-exclude-list.txt
+wp-config.php
+/wp-content/themes/*/scss
+/wp-content/themes/*/scripts
+/wp-content/themes/*/.sass-cache
+/wp-content/themes/*/bower.json
+/wp-content/themes/*/bowerOLD.json
+/wp-content/themes/*/gulpfile.js
+/wp-content/themes/*/gulpfileOLD.js
+/wp-content/themes/*/package.json
+/wp-content/themes/*/package-lock.json
+/wp-content/themes/*/style.css.map
+/wp-content/themes/*/node_modules
