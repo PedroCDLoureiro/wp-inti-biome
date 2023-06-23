@@ -1,0 +1,129 @@
+header{
+	padding: 0 0 10px;
+	position: relative;
+	-webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.15);
+	-moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.15);
+	box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.15);
+	.top{
+		background-color: $primarycolor;
+	}
+	.header-wrapper{
+		position: fixed;
+    	width: 100%;
+		align-items: center;
+		padding: 0 0 10px;
+		z-index: 10;
+		max-height: 145px;
+		.logo{
+			display: flex;
+			justify-content: center;
+			border-radius: 5px 5px 15px 15px;
+			padding: 10px 0;
+			background-color: #fff;
+			@media(max-width: $sm){
+				text-align: center;
+			}
+			.logo-parceiro, .logo-conect{
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				img{
+					transition: all ease .3s;
+				}
+				&.t-scroll{
+					img{
+						max-width: 60px;
+						height: auto;
+					}
+				}
+			}
+		}
+		.div-menu{
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			#menu-desktop{
+				ul{
+					padding-left:0;
+					margin: auto;
+					li{
+						display: inline-flex;
+						padding: 0 15px;
+						text-align: center;
+						&:last-of-type{
+							padding-right: 0;
+						}
+						a{
+							color: #fff;
+							font-size:16px;
+							font-weight:500;
+						}
+					}
+				}
+				@media(max-width: $sm){
+					display: none;
+				}
+			}
+		}
+	}
+	.conteudo{
+		padding: 0;
+		padding-top: 180px;
+		.titulos{
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			flex-direction: row;
+			align-content: center;
+			padding: 0;
+			h2, h3{
+				color: #FFF;
+				font-size: 42px;
+				font-weight: 900;
+				line-height: 1.2;
+				font-style: italic;
+				@media (max-width: $md){
+					font-size: 36px;
+				}
+				@media (max-width: $sm){
+					font-size: 30px;
+				}
+			}
+			h3{
+				font-size: 24px;
+				font-weight: 400;
+				@media (max-width: $md){
+					font-size: 20px;
+				}
+				@media (max-width: $md){
+					font-size: 16px;
+				}
+			}
+			.row-botoes{
+				margin-top: 45px;
+				.botao{
+					a{
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						height: 65px;
+						margin: 10px 0;
+						font-weight: 700;
+						font-size: 18px;
+						figure{
+							margin-right: 10px;
+						}
+						@media (max-width: $md){
+							font-size: 16px;
+						}
+					}
+				}
+			}
+		}
+		.imagem{
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+		}
+	}
+}

@@ -1,0 +1,170 @@
+section{
+	&#banner{
+	    position: relative;
+		overflow: hidden;
+		.item-mobile{
+			display: none;
+		}
+		img{
+			width: 100%;
+		}
+		@media(max-width: 767px){
+			.item{
+				display: none;
+			}
+			.item-mobile{
+				display: block;
+			}
+		}
+	}
+	&#about-us{
+		padding: 80px 0 120px 0;
+		.imagem{
+			padding: 30px 0px;
+		}
+	}
+	&#products{
+		.slider-products{
+			padding: 60px 0px 90px 0px;
+			.slick-track{
+				.item{
+					a{
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: center;
+						align-items: center;
+						text-align: center;
+						height: 100%;
+						box-shadow: 0px 3px 16px #00000014;
+						border-radius: 16px;
+						figure{
+							display: flex;
+							justify-content: center;
+							img{
+								width: 100%;
+							}
+						}
+						.text{
+							padding: 16px 32px;
+						}
+						.nome{
+							padding: 22px;
+							color: #FFF;
+							font-size: 25px;
+							text-transform: lowercase;
+							border-radius: 0 0 16px 16px;
+							text-align: center;
+							width: 100%;
+						}
+					}
+					&:nth-child(3n+1){
+						a{
+							.nome{
+								background-color: $primarycolor;
+							}
+						}
+					}
+					&:nth-child(3n+2){
+						a{
+							.nome{
+								background-color: #309D5F;
+							}
+						}
+					}
+					&:nth-child(3n+3){
+						a{
+							.nome{
+								background-color: #EE6381;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&#intimate-health{
+		.item-mobile{
+			display: none;
+		}
+		img{
+			width: 100%;
+		}
+		@media (max-width: $sm){
+			.item{
+				display: none;
+			}
+			.item-mobile{
+				display: block;
+			}
+		}
+	}
+	&#discoveries{
+		padding: 70px 0;
+		.slider-discoveries{
+			padding: 30px 0px 90px 0px;
+			.slick-track{
+				.slick-slide{
+					padding: 15px;
+				}
+				.item{
+					a{
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: center;
+						align-items: flex-start;
+						text-align: center;
+						height: 100%;
+						box-shadow: 0px 3px 16px #00000014;
+						border-radius: 16px;
+						figure{
+							display: flex;
+							justify-content: center;
+							img{
+								width: 100%;
+							}
+						}
+						.text{
+							padding: 15px 32px 50px;
+							text-align: left;
+						}
+					}
+				}
+			}
+		}
+		.botao{
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
+	}
+	&#contact{
+		h2{
+			text-align: center !important;
+		}
+		form{
+			margin:50px 0;
+		}
+		input, textarea{
+			margin: 15px 0 30px 0;
+		}
+		label{
+			color: $primaryfontcolor;
+		}
+		.submit-button{
+			width: 100%;
+		}
+		@media (max-width: $md){
+			background: none;
+		}
+		@media (max-width: $sm){
+			margin-bottom: 88px !important;
+			.div-contact{
+				padding: 0 30px !important;
+			}
+			h2{
+				font-size: 24px !important;
+				line-height: 90% !important;
+			}
+		}
+	}
+}

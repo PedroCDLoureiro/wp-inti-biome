@@ -1,0 +1,113 @@
+footer{
+    position: relative;
+    background-color: $primarycolor;
+    padding: 60px 0;
+    color: #FFF;
+    .top-footer{
+        .navegacao{
+            ul{
+                margin: auto;
+                text-align: center;
+                padding: 5px 0;
+                li{
+                    display: inline-flex;
+                    padding: 0 24px;
+                    a{
+                        display: flex;
+                        font-size: 16px;
+                        font-weight: 600;
+                        align-items: center;
+                        justify-content: center;
+                        color: #fff;
+                        border: none;
+                        transition: all ease .3s;
+                        position: relative;
+						&:before{
+							content: "";
+							background-color: #fff;
+							height: 2px;
+							width: 0;
+							position: absolute;
+							left: 0;
+							bottom: -0;
+							transition: all ease .3s;
+						}
+                        i{
+                            font-family: "Font Awesome 5 Brands";
+                            font-weight: 500;
+                        }
+                        &:hover{
+                            &:before{
+                                width: 100%;
+                            }
+                        }
+                    }
+                    &:nth-child(n+2){
+                        border-left: 1px solid #FFF;
+                    }
+                }
+                @media (max-width: $sm){
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    li{
+                        display: flex;
+                        justify-content: center;
+                        border: none !important;
+                        position: relative;
+                        padding: 20px 0;
+                        a{
+                            &:before{
+                                display: none;
+                            }
+                        }
+                        &:nth-child(n+2){
+                            &:before{
+                                content: '';
+                                background-color: #fff;
+                                width: 24px;
+                                height: 2px;
+                                position: absolute;
+                                top: 0;
+                                left: 50%;
+                                transform: translate(-50%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .logo{
+            display: flex;
+        }
+    }
+    .bottom-footer{
+        .bottom{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 60px;
+            a{
+                display: flex;
+                align-items: center;
+            }
+            i{
+                font-family: 'Font Awesome 5 Brands';
+                color: #FFF;
+                font-size: 42px;
+                font-weight: 500;
+            }
+        }
+    }
+    @media (max-width: $sm){
+        padding-top: 30px;
+        .bottom{
+            padding-top: 0 !important;
+            display: flex;
+            flex-direction: column-reverse;
+            .instagram{
+                margin-bottom: 60px;
+            }
+        }
+    }
+}

@@ -1,0 +1,123 @@
+header{
+	position: relative;
+	background: #FFF;
+	width: 100%;
+	z-index: 1;
+	box-shadow: 0px 4px 16px #00000014;
+	.row-topo{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.div-menu-mobile{
+			display: none;
+		}
+		.logo, .pesquisa{
+			text-align: center;
+		}
+		.pesquisa{
+			i{
+				transform: rotateY(180deg);
+				cursor: pointer;
+			}
+		}
+	}
+	.div-menu{
+		background-color: $primarycolor;
+		#menu-desktop{
+			ul{
+				display: flex;
+				justify-content: space-evenly;
+				text-align: center;
+				margin: auto;
+				li{
+					display: inline-flex;
+					padding: 15px 20px;
+					text-align: center;
+					&:last-of-type{
+						padding-right: 0;
+					}
+					a{
+						position: relative;
+						color: $secondaryfontcolor;
+						font-size: 18px;
+						font-weight: 400;
+						line-height: 27px;
+						letter-spacing: -0.02em;
+						transition: all ease .3s;
+						i{
+							margin-left: 10px;
+						}
+					}
+					&.menu-down{
+						.submenu{
+							position: absolute;
+							top: 136px;
+							width: 100%;
+							height: 0;
+							left: 0;
+							display: block;
+							opacity: 0;
+							overflow: hidden;
+							z-index: -1;
+							transition: all ease .3s;
+							background-color: $primaryfontcolor;
+							ul{
+								justify-content: flex-start;
+								li{
+									display: flex;
+									align-items: center;
+									padding: 16px 32px;
+									transition: all ease .3s;
+									a{
+										width: 100%;
+										p{
+											text-align: left;
+											font-size: 12px;
+											line-height: 15.6px;
+											font-weight: 400;
+											letter-spacing: -2%;
+											color: #fff;
+											margin: 0;
+										}
+									}
+									&:hover{
+										p{
+											color: $secondarycolor
+										}
+									}
+								}
+							}
+							a{
+								&:before{
+									display: none;
+								}
+							}
+						}
+						&:hover{
+							.submenu{
+								height: max-content;
+								opacity: 1;
+								overflow: visible;
+								z-index: 2;
+							}
+						}
+					}
+					&:hover{
+						a{
+							color: #FFF;
+						}
+					}
+				}
+			}
+			@media(max-width: $sm){
+				display: none;
+			}
+		}
+	}
+	@media (max-width: $sm){
+		padding: 10px 0;
+		.div-menu{
+			display: none;
+		}
+	}
+}
